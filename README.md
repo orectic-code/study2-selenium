@@ -1,1 +1,1 @@
-# study-02-selenium-master
+# study-02-selenium
