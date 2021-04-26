@@ -40,7 +40,7 @@ def log(txt):
         f.write(logstr + '\n')
     print(logstr)
 
-def find_table_target_word(th_elms, td_elms,target:str):
+def find_table_target_word(th_elms, td_elms, target:str):
     # tableのthからtargetの文字列を探し一致する行をtdを返す
     for th_elm,td_elm in zip(th_elms,td_elms):
         if th_elm.text == target:
@@ -121,7 +121,7 @@ def main():
                        "ステータス":exp_status_list,
                        "初年度年収":exp_first_year_fee_list})
     df.to.csv(EXP_CSV_PATH.format(search_keyword=search_keyword,datetime=
-                                  now),encoding="utf-8-sig")
+                                  now),encoding="utf-8")
     log(f"処理完了　成功件数:{success} 件 / 失敗件数:{fail} 件")
    
 # 直接起動された場合はmain()を起動(モジュールとして呼び出された場合は起動しないようにするため)
